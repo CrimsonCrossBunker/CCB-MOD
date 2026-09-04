@@ -16,7 +16,7 @@ ccb_adapters: []
 license: MIT
 source: https://github.com/author/repository
 issues: https://github.com/author/repository/issues
-ccb_versions: [0.Ag-Candidate-2026-08-27-0921]
+ccb_versions: [0.Ag-Candidate-2026-09-05-0219]
 lua_api: 1
 dependencies: []
 conflicts: []

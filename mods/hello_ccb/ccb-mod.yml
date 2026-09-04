@@ -18,12 +18,12 @@ license: MIT
 source: https://github.com/CrimsonCrossBunker/CCB-MOD/tree/main/mods/hello_ccb
 issues: https://github.com/CrimsonCrossBunker/CCB-MOD/issues
 ccb_versions:
-  - 2026-09-02-8c17aa4a271
+  - 0.Ag-Candidate-2026-09-05-0219
 lua_api: 1
-dependencies: []
+dependencies: [dda]
 conflicts: []
-updated_at: "2026-09-04"
+updated_at: "2026-09-05"
 validation:
   status: passed
-  ccb_version: 2026-09-02-8c17aa4a271
-  checked_at: "2026-09-04"
+  ccb_version: 0.Ag-Candidate-2026-09-05-0219
+  checked_at: "2026-09-05"

@@ -65,7 +65,7 @@ function render() {
     card.querySelector('.conflicts-row').hidden = mod.conflicts.length === 0;
     card.querySelector('.license').textContent = mod.license;
     card.querySelector('.updated').textContent = mod.updated_at;
-    card.querySelector('.checked').textContent = mod.validation.checked_at || text('none');
+    card.querySelector('.checked').textContent = [mod.validation.ccb_version, mod.validation.checked_at].filter(Boolean).join(' · ') || text('none');
     card.querySelector('.download').href = mod.download;
     card.querySelector('.source').href = mod.source;
     card.querySelector('.issues').href = mod.issues;
