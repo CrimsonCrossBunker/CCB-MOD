@@ -17,6 +17,11 @@ CCB-MOD 是《大灾变：清水炸弹》的外部 MOD 目录。第一版只分�
 MOD 站和 Catapult 共用 [`generated/mods.json`](generated/mods.json)。第一版不做账号、
 评分或数据库；自动检查只处理基本格式，其余问题由维护者在 PR 中人工处理。
 
+Public catalog / 公开目录：<https://crimsoncrossbunker.github.io/CCB-MOD/>。
+The organization website deploy copies the validated catalog and generated
+CCB-maintained MOD packages to this path. 第一版由组织主站在部署时复制已校验目录与
+CCB 维护包到该地址；更新异常由维护者人工处理。
+
 ## Local checks / 本地检查
 
 ```sh
