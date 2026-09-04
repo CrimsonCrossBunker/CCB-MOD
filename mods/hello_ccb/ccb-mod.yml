@@ -1,0 +1,29 @@
+schema_version: 1
+id: hello_ccb
+type: ccb-maintained
+name:
+  zh-Hans: CCB Lua 欢迎示例
+  en: CCB Lua Welcome Example
+description:
+  zh-Hans: 最小的 CCB Lua Platform v1 MOD，进入世界后显示一条欢迎消息。
+  en: A minimal CCB Lua Platform v1 MOD that displays a message when the world is ready.
+version: 0.1.0
+authors:
+  - CrimsonCrossBunker contributors
+maintainers:
+  - CrimsonCrossBunker contributors
+ccb_adapters:
+  - CrimsonCrossBunker contributors
+license: MIT
+source: https://github.com/CrimsonCrossBunker/CCB-MOD/tree/main/mods/hello_ccb
+issues: https://github.com/CrimsonCrossBunker/CCB-MOD/issues
+ccb_versions:
+  - 2026-09-02-8c17aa4a271
+lua_api: 1
+dependencies: []
+conflicts: []
+updated_at: "2026-09-04"
+validation:
+  status: passed
+  ccb_version: 2026-09-02-8c17aa4a271
+  checked_at: "2026-09-04"

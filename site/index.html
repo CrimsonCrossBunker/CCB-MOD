@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CCB external MOD catalog">
+  <title>CCB MOD</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="Primary">
+      <a class="brand" href="https://crimsoncrossbunker.github.io/">CCB MOD</a>
+      <div class="links">
+        <a href="https://crimsoncrossbunker.github.io/" data-i18n="mainSite">主站</a>
+        <a href="https://crimsoncrossbunker.github.io/CCB-Docs/" data-i18n="docs">文档</a>
+        <a href="https://crimsoncrossbunker.github.io/CCB-GUIDE/" data-i18n="guide">数据百科</a>
+        <a href="https://github.com/CrimsonCrossBunker/CCB-MOD" data-i18n="contribute">登记 / 贡献</a>
+      </div>
+      <div class="language" aria-label="Language">
+        <button type="button" data-lang="zh-Hans">简中</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">CCB / MOD REGISTRY</p>
+      <h1 data-i18n="title">寻找并安装 CCB MOD</h1>
+      <p data-i18n="intro">这里同时收录 CCB 维护的外部 MOD 和作者自行维护的社区 MOD。</p>
+    </section>
+    <section class="toolbar" aria-label="Catalog filters">
+      <label>
+        <span class="sr-only" data-i18n="searchLabel">搜索 MOD</span>
+        <input id="search" type="search" data-i18n-placeholder="search" placeholder="搜索名称、简介或作者">
+      </label>
+      <div class="filters">
+        <button type="button" class="active" data-type="all" data-i18n="all">全部</button>
+        <button type="button" data-type="ccb-maintained" data-i18n="maintained">CCB 维护</button>
+        <button type="button" data-type="community" data-i18n="community">社区维护</button>
+      </div>
+    </section>
+    <p id="status" role="status" data-i18n="loading">正在读取 MOD 列表……</p>
+    <section id="catalog" class="catalog" aria-live="polite"></section>
+  </main>
+  <template id="card-template">
+    <article class="card">
+      <div class="card-head"><span class="kind"></span><span class="validation"></span></div>
+      <h2></h2>
+      <p class="description"></p>
+      <dl>
+        <div><dt data-i18n="version">MOD 版本</dt><dd class="version"></dd></div>
+        <div><dt data-i18n="ccbVersion">适配 CCB</dt><dd class="ccb-version"></dd></div>
+        <div><dt data-i18n="authors">原作者</dt><dd class="authors"></dd></div>
+        <div><dt data-i18n="maintainers">维护者</dt><dd class="maintainers"></dd></div>
+        <div><dt data-i18n="adapters">适配人</dt><dd class="adapters"></dd></div>
+        <div class="dependencies-row"><dt data-i18n="dependencies">依赖</dt><dd class="dependencies"></dd></div>
+        <div class="conflicts-row"><dt data-i18n="conflicts">冲突</dt><dd class="conflicts"></dd></div>
+        <div><dt data-i18n="license">许可证</dt><dd class="license"></dd></div>
+        <div><dt data-i18n="updated">更新时间</dt><dd class="updated"></dd></div>
+        <div><dt data-i18n="checked">验证时间</dt><dd class="checked"></dd></div>
+      </dl>
+      <div class="actions">
+        <a class="primary download" data-i18n="download">下载 ZIP</a>
+        <a class="source" data-i18n="source">查看源码</a>
+        <a class="issues" data-i18n="issues">反馈问题</a>
+      </div>
+    </article>
+  </template>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Copy to registry/community/<your-mod-id>.yml. This template is not published.
+# 复制为 registry/community/<你的-mod-id>.yml。本模板不会进入公开目录。
+schema_version: 1
+id: replace_me
+type: community
+name:
+  zh-Hans: 示例社区 MOD
+  en: Example Community MOD
+description:
+  zh-Hans: 请替换为真实简介。
+  en: Replace this with the real description.
+version: 0.1.0
+authors: [author-name]
+maintainers: [author-name]
+ccb_adapters: []
+license: MIT
+source: https://github.com/author/repository
+issues: https://github.com/author/repository/issues
+ccb_versions: [0.Ag-Candidate-2026-08-27-0921]
+lua_api: 1
+dependencies: []
+conflicts: []
+download: https://github.com/author/repository/releases/download/v0.1.0/mod.zip
+updated_at: "2026-09-04"
+validation:
+  status: not-tested
+  ccb_version: null
+  checked_at: null
