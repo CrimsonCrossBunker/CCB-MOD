@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Apply to list your CCB MOD. 申请收录民间 CCB MOD。"><title>申请收录 / Submit a MOD · CCB MOD</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header><nav aria-label="Primary"><a class="brand" href="./">CCB MOD</a><div class="links"><a href="./" data-zh="MOD 列表" data-en="MOD list">MOD 列表</a><a id="registration-guide" href="https://github.com/CrimsonCrossBunker/CCB-MOD/blob/main/docs/register.zh-Hans.md" data-zh="登记说明" data-en="Submission guide">登记说明</a></div><div class="language"><button type="button" data-lang="zh-Hans">简中</button><button type="button" data-lang="en">EN</button></div></nav></header>
+<main class="submission">
+<section class="hero"><h1 data-zh="申请收录你的 MOD" data-en="Submit your MOD">申请收录你的 MOD</h1>
+<p data-zh="源码留在你的仓库；CCB-MOD 只登记信息，由你继续维护。" data-en="Keep the source in your repository. CCB-MOD lists the entry; you remain its maintainer.">源码留在你的仓库；CCB-MOD 只登记信息，由你继续维护。</p></section>
+<ol><li data-zh="填写资料，生成登记文件。不会上传或执行你的 MOD。" data-en="Fill in the form and generate an entry. Your MOD is not uploaded or executed.">填写资料，生成登记文件。不会上传或执行你的 MOD。</li>
+<li data-zh="打开 GitHub 申请草稿，补充测试记录，登录后自己点击提交。申请内容是公开的。" data-en="Open a GitHub issue draft, add test evidence, sign in and submit it yourself. The application is public.">打开 GitHub 申请草稿，补充测试记录，登录后自己点击提交。申请内容是公开的。</li>
+<li data-zh="维护者人工审核、合入并部署后，网站和启动器同时收录。申请不等于通过审核。" data-en="After manual review, merge and deployment, your MOD appears on the site and in the launcher. Applying is not approval.">维护者人工审核、合入并部署后，网站和启动器同时收录。申请不等于通过审核。</li></ol>
+<p class="muted" data-zh="不熟悉版本或适配信息可先提交普通 Issue 请维护者帮助；不要猜作者或伪造测试结果。下载包应只包含一个 MOD，main.lua 或 modinfo.json 放在 ZIP 根目录或一层目录内。" data-en="Unsure about versions or compatibility? Ask in a regular issue; do not invent credits or test results. The ZIP must contain one MOD, with main.lua or modinfo.json at its root or inside one directory.">不熟悉版本或适配信息可先提交普通 Issue 请维护者帮助；不要猜作者或伪造测试结果。下载包应只包含一个 MOD，main.lua 或 modinfo.json 放在 ZIP 根目录或一层目录内。</p>
+<form id="submission-form"><fieldset><legend data-zh="MOD 信息（带 * 为必填）" data-en="MOD details (* required)">MOD 信息（带 * 为必填）</legend><div class="form-grid">
+        <label><span data-zh="MOD ID" data-en="MOD ID">MOD ID *</span><input name="id" type="text" required maxlength="64"  placeholder="hello_my_mod"></label>
+        <label><span data-zh="MOD 版本" data-en="MOD version">MOD 版本 *</span><input name="version" type="text" required maxlength="64"  placeholder="0.1.0"></label>
+        <label><span data-zh="简中名称（两种语言至少填一种）" data-en="Chinese name (at least one language)">简中名称（两种语言至少填一种）</span><input name="name_zh" type="text"  maxlength="80"  placeholder=""></label>
+        <label><span data-zh="英文名称" data-en="English name">英文名称</span><input name="name_en" type="text"  maxlength="80"  placeholder=""></label>
+        <label><span data-zh="简中简介（两种语言至少填一种）" data-en="Chinese description (at least one language)">简中简介（两种语言至少填一种）</span><textarea name="description_zh" maxlength="300"></textarea></label>
+        <label><span data-zh="英文简介" data-en="English description">英文简介</span><textarea name="description_en" maxlength="300"></textarea></label>
+        <label><span data-zh="源码仓库 HTTPS 地址" data-en="Source repository HTTPS URL">源码仓库 HTTPS 地址 *</span><input name="source" type="url" required maxlength="300"  placeholder=""></label>
+        <label><span data-zh="直接下载 ZIP 的 HTTPS 地址（固定版本）" data-en="Direct ZIP HTTPS URL (fixed version)">直接下载 ZIP 的 HTTPS 地址（固定版本） *</span><input name="download" type="url" required maxlength="400"  placeholder=""></label>
+        <label><span data-zh="反馈问题 HTTPS 地址" data-en="Issue tracker HTTPS URL">反馈问题 HTTPS 地址 *</span><input name="issues" type="url" required maxlength="300"  placeholder=""></label>
+        <label><span data-zh="许可证（例如 MIT 或 CC-BY-SA-4.0）" data-en="License (e.g. MIT or CC-BY-SA-4.0)">许可证（例如 MIT 或 CC-BY-SA-4.0） *</span><input name="license" type="text" required maxlength="80"  placeholder=""></label>
+        <label><span data-zh="原作者（逗号分隔）" data-en="Original authors (comma separated)">原作者（逗号分隔） *</span><input name="authors" type="text" required maxlength="160"  placeholder=""></label>
+        <label><span data-zh="当前维护者（逗号分隔）" data-en="Current maintainers (comma separated)">当前维护者（逗号分隔） *</span><input name="maintainers" type="text" required maxlength="160"  placeholder=""></label>
+        <label><span data-zh="CCB 适配人（不知道就留空）" data-en="CCB adapters (leave empty if unknown)">CCB 适配人（不知道就留空）</span><input name="ccb_adapters" type="text"  maxlength="160"  placeholder=""></label>
+        <label><span data-zh="实际适配的完整 CCB 版本（逗号分隔）" data-en="Exact supported CCB versions (comma separated)">实际适配的完整 CCB 版本（逗号分隔） *</span><input name="ccb_versions" type="text" required maxlength="200"  placeholder="0.Ag-Candidate-2026-09-05-0219"></label>
+        <label><span data-zh="Lua API（纯 JSON MOD 留空）" data-en="Lua API (leave empty for JSON-only MODs)">Lua API（纯 JSON MOD 留空）</span><input name="lua_api" type="number"  maxlength="8" min="1" step="1" placeholder="1"></label>
+        <label><span data-zh="本次 MOD 版本更新时间" data-en="MOD release update date">本次 MOD 版本更新时间 *</span><input name="updated_at" type="date" required maxlength="10"  placeholder=""></label>
+        <label><span data-zh="依赖 MOD ID（逗号分隔，通常含 dda）" data-en="Required MOD IDs (comma separated, usually dda)">依赖 MOD ID（逗号分隔，通常含 dda）</span><input name="dependencies" type="text"  maxlength="200"  placeholder="dda"></label>
+        <label><span data-zh="冲突 MOD ID（逗号分隔）" data-en="Conflicting MOD IDs (comma separated)">冲突 MOD ID（逗号分隔）</span><input name="conflicts" type="text"  maxlength="200"  placeholder=""></label>
+        <label><span data-zh="简中：安装启用后怎么玩、在哪里找到内容" data-en="Chinese: how to play and find the content">简中：安装启用后怎么玩、在哪里找到内容</span><textarea name="play_notes_zh" maxlength="400"></textarea></label>
+        <label><span data-zh="英文：安装启用后怎么玩" data-en="English: how to play after enabling">英文：安装启用后怎么玩</span><textarea name="play_notes_en" maxlength="400"></textarea></label>
+</div></fieldset><button type="submit" data-zh="生成申请" data-en="Generate application">生成申请</button></form>
+<p id="form-error" class="error" role="alert"></p>
+<section id="submission-result" hidden><h2 data-zh="检查申请内容，然后提交" data-en="Review the entry, then submit">检查申请内容，然后提交</h2>
+<p data-zh="下方 JSON 也是有效 YAML，可下载为 .yml 提交 PR。验证状态初始为未验证，由维护者根据测试记录确认。" data-en="The JSON below is also valid YAML and can be downloaded as .yml for a PR. Validation starts as not tested; maintainers review your evidence.">下方 JSON 也是有效 YAML，可下载为 .yml 提交 PR。验证状态初始为未验证，由维护者根据测试记录确认。</p>
+<label for="manifest" data-zh="登记文件（只读，可复制）" data-en="Manifest (read-only, copyable)">登记文件（只读，可复制）</label><textarea id="manifest" readonly spellcheck="false"></textarea>
+<div class="actions"><a id="open-issue" class="primary" target="_blank" rel="noopener noreferrer" data-zh="打开 GitHub 申请草稿" data-en="Open GitHub application draft">打开 GitHub 申请草稿</a><button type="button" id="download-manifest" data-zh="下载登记文件" data-en="Download manifest">下载登记文件</button></div>
+<p id="long-application" hidden data-zh="资料较长，请复制登记文件内容到普通 Issue 或用文件提交 PR。" data-en="This entry is too long for a reliable prefilled link. Copy it into a regular issue or submit the file in a PR.">资料较长，请复制登记文件内容到普通 Issue 或用文件提交 PR。</p></section>
+<p><a href="https://github.com/CrimsonCrossBunker/CCB-MOD/issues/new?template=mod-submission.md" data-zh="直接到 GitHub 申请 / 请求帮助" data-en="Apply or ask for help on GitHub">直接到 GitHub 申请 / 请求帮助</a> · <a href="https://github.com/CrimsonCrossBunker/CCB-MOD/issues" data-zh="查看申请进度" data-en="View application progress">查看申请进度</a></p>
+<noscript>JavaScript is required for the generator. You can use the GitHub link above. 生成器需要 JavaScript，也可以直接使用上方 GitHub 申请入口。</noscript>
+</main><script src="catalog-core.js"></script><script src="submit.js"></script></body></html>

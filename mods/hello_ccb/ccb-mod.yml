@@ -8,6 +8,9 @@ description:
   zh-Hans: 最小的 CCB Lua Platform v1 MOD，进入世界后显示一条欢迎消息。
   en: A minimal CCB Lua Platform v1 MOD that displays a message when the world is ready.
 version: 0.1.0
+play_notes:
+  zh-Hans: 在新世界的 MOD 列表中启用，进入世界后打开消息记录，确认出现“来自 CCB-MOD 的问候”。
+  en: Enable in a new world's MOD list. Enter the world and open message history to find Hello from CCB-MOD.
 authors:
   - CrimsonCrossBunker contributors
 maintainers:

@@ -1,0 +1,28 @@
+schema_version: 1
+id: field_journal
+type: ccb-maintained
+name:
+  zh-Hans: "野外观察手册（Lua 示例）"
+  en: "Field Journal (Lua example)"
+description:
+  zh-Hans: "可交互的手册：查看当地天气、记录观察次数，角色记录随存档保存和恢复。"
+  en: "An interactive notebook: read local weather and record observations with a per-character counter that survives saving and loading."
+play_notes:
+  zh-Hans: "新世界启用后获得手册，使用它选择“记录观察”或“查看天气”。保存重载后记录次数仍在。可用一张纸制作替代手册。"
+  en: "Enable in a new world to receive the journal. Activate it, choose Record observation or Read weather. Save and reload to check the counter. Craft a replacement from one paper sheet."
+version: 0.1.0
+authors: [CrimsonCrossBunker contributors]
+maintainers: [CrimsonCrossBunker contributors]
+ccb_adapters: []
+license: MIT
+source: https://github.com/CrimsonCrossBunker/CCB-MOD/tree/main/mods/field_journal
+issues: https://github.com/CrimsonCrossBunker/CCB-MOD/issues
+ccb_versions: [0.Ag-Candidate-2026-09-05-0219]
+lua_api: 1
+dependencies: [dda]
+conflicts: []
+updated_at: "2026-09-05"
+validation:
+  status: passed
+  ccb_version: 0.Ag-Candidate-2026-09-05-0219
+  checked_at: "2026-09-05"

@@ -1,0 +1,28 @@
+schema_version: 1
+id: pocket_alarm
+type: ccb-maintained
+name:
+  zh-Hans: "口袋提醒器（Lua 示例）"
+  en: "Pocket Reminder (Lua example)"
+description:
+  zh-Hans: "可重复使用的十回合提醒器，展示物品交互、角色持久化任务和重复预约防护。"
+  en: "A reusable ten-turn reminder demonstrating item activation, persistent character tasks and duplicate-scheduling prevention."
+play_notes:
+  zh-Hans: "新世界启用后获得提醒器。使用后让游戏经过十回合，会响一条提示；等待时重复使用不会重复预约。可用一份废料和一块石头制作。"
+  en: "Enable in a new world to receive a reminder. Activate it, then spend ten game turns; a message rings once. Activating while pending does not queue duplicates. Craft from one scrap piece with a rock."
+version: 0.1.0
+authors: [CrimsonCrossBunker contributors]
+maintainers: [CrimsonCrossBunker contributors]
+ccb_adapters: []
+license: MIT
+source: https://github.com/CrimsonCrossBunker/CCB-MOD/tree/main/mods/pocket_alarm
+issues: https://github.com/CrimsonCrossBunker/CCB-MOD/issues
+ccb_versions: [0.Ag-Candidate-2026-09-05-0219]
+lua_api: 1
+dependencies: [dda]
+conflicts: []
+updated_at: "2026-09-05"
+validation:
+  status: passed
+  ccb_version: 0.Ag-Candidate-2026-09-05-0219
+  checked_at: "2026-09-05"

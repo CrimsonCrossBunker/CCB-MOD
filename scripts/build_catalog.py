@@ -58,6 +58,12 @@ def validate_manifests(root: Path = ROOT) -> list[tuple[Path, dict[str, Any]]]:
             raise CatalogError(f"duplicate id {mod_id!r}: {seen[mod_id]} and {path}")
         seen[mod_id] = path
 
+        validation = entry["validation"]
+        if validation["status"] == "passed" and (
+            not validation["checked_at"] or validation["ccb_version"] not in entry["ccb_versions"]
+        ):
+            raise CatalogError(f"{path}: passed validation requires a date and a supported exact CCB version")
+
         is_maintained_path = path.parent.parent.name == "mods"
         if is_maintained_path != (entry["type"] == "ccb-maintained"):
             expected = "mods/<id>/ccb-mod.yml" if entry["type"] == "ccb-maintained" else "registry/community/<id>.yml"
@@ -73,6 +79,8 @@ def validate_manifests(root: Path = ROOT) -> list[tuple[Path, dict[str, Any]]]:
                 missing = {"zh-Hans", "en"} - set(entry[field])
                 if missing:
                     raise CatalogError(f"{path}: {field} is missing {', '.join(sorted(missing))}")
+        elif path.stem != mod_id:
+            raise CatalogError(f"{path}: filename must match id {mod_id!r}")
         loaded.append((path, entry))
 
     return loaded

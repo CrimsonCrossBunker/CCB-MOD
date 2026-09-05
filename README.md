@@ -33,5 +33,12 @@ python3 scripts/package_mods.py --output /tmp/ccb-mod-packages
 
 Registration instructions:
 
+- [申请收录 / Submit a MOD](https://crimsoncrossbunker.github.io/CCB-MOD/submit.html): generate a manifest and open a GitHub issue draft, no PR skills required.
+- [目录 API / Catalog API](docs/api.md)
+- CCB-maintained playable examples: `hello_ccb`, `scrap_multitool`, `field_journal`, `pocket_alarm`. These are not fictional community submissions.
+
 - [简体中文](docs/register.zh-Hans.md)
 - [English](docs/register.en.md)
+
+Additional local checks: `node --test tests/test_site.cjs` and `lua tests/test_examples.lua`.
+The Lua test uses fake services for behavior checks; real-game evidence is recorded separately in [acceptance-v1.md](docs/acceptance-v1.md).
