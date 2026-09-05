@@ -15,7 +15,8 @@
         <a href="https://crimsoncrossbunker.github.io/" data-i18n="mainSite">主站</a>
         <a href="https://crimsoncrossbunker.github.io/CCB-Docs/" data-i18n="docs">文档</a>
         <a href="https://crimsoncrossbunker.github.io/CCB-GUIDE/" data-i18n="guide">数据百科</a>
-        <a href="https://github.com/CrimsonCrossBunker/CCB-MOD" data-i18n="contribute">登记 / 贡献</a>
+        <a href="submit.html" data-i18n="contribute">申请收录</a>
+        <a href="https://github.com/CrimsonCrossBunker/CCB-MOD/blob/main/docs/api.md">API</a>
       </div>
       <div class="language" aria-label="Language">
         <button type="button" data-lang="zh-Hans">简中</button>
@@ -29,6 +30,20 @@
       <h1 data-i18n="title">寻找并安装 CCB MOD</h1>
       <p data-i18n="intro">这里同时收录 CCB 维护的外部 MOD 和作者自行维护的社区 MOD。</p>
     </section>
+    <div class="actions intro-actions">
+      <a class="primary" href="https://crimsoncrossbunker.github.io/mods" id="play-link" data-i18n="startPlaying">下载启动器 / 安装说明</a>
+      <a href="submit.html" data-i18n="contribute">申请收录</a>
+    </div>
+    <details class="help">
+      <summary data-i18n="howToPlay">安装了，怎样开始玩？</summary>
+      <ol>
+        <li data-i18n="play1">在启动器选择 CCB，安装与你选的 MOD 对应的完整 Candidate 版本。</li>
+        <li data-i18n="play2">打开 MOD 标签，选择 CCB 维护或民间维护，查看适配版本后安装。</li>
+        <li data-i18n="play3">启动游戏，创建新世界，在 MOD 列表里启用已安装的 MOD，再创建角色。安装不等于启用。</li>
+        <li data-i18n="play4">按每张卡片里的“怎么玩”确认效果。不要直接在重要存档里试装或移除 MOD。</li>
+      </ol>
+      <p data-i18n="trust">Lua MOD 是受信任的本地代码，不是安全沙箱。只安装你信任的来源；“收录”和“已验证”都不代表安全保证。</p>
+    </details>
     <section class="toolbar" aria-label="Catalog filters">
       <label>
         <span class="sr-only" data-i18n="searchLabel">搜索 MOD</span>
@@ -39,18 +54,24 @@
         <button type="button" data-type="ccb-maintained" data-i18n="maintained">CCB 维护</button>
         <button type="button" data-type="community" data-i18n="community">社区维护</button>
       </div>
+      <label class="sort-label"><span class="sr-only" data-i18n="sort">排序</span><select id="sort"><option value="updated" data-i18n="recent">最近更新</option><option value="name" data-i18n="byName">名称</option></select></label>
     </section>
     <p id="status" role="status" data-i18n="loading">正在读取 MOD 列表……</p>
+    <button type="button" id="retry" hidden data-i18n="retry">重新加载</button>
+    <p id="community-empty" hidden><span data-i18n="communityEmpty">暂时还没有作者提交并通过审核的民间 MOD。你的 MOD 可以成为第一批。</span> <a href="submit.html" data-i18n="contribute">申请收录</a></p>
     <section id="catalog" class="catalog" aria-live="polite"></section>
   </main>
   <template id="card-template">
     <article class="card">
       <div class="card-head"><span class="kind"></span><span class="validation"></span></div>
-      <h2></h2>
+      <h2><a class="permalink"></a></h2>
       <p class="description"></p>
+      <p class="play-notes"></p>
+      <details><summary data-i18n="details">版本、作者与适配信息</summary>
       <dl>
         <div><dt data-i18n="version">MOD 版本</dt><dd class="version"></dd></div>
         <div><dt data-i18n="ccbVersion">适配 CCB</dt><dd class="ccb-version"></dd></div>
+        <div><dt>Lua API</dt><dd class="lua-api"></dd></div>
         <div><dt data-i18n="authors">原作者</dt><dd class="authors"></dd></div>
         <div><dt data-i18n="maintainers">维护者</dt><dd class="maintainers"></dd></div>
         <div><dt data-i18n="adapters">适配人</dt><dd class="adapters"></dd></div>
@@ -60,6 +81,7 @@
         <div><dt data-i18n="updated">更新时间</dt><dd class="updated"></dd></div>
         <div><dt data-i18n="checked">验证时间</dt><dd class="checked"></dd></div>
       </dl>
+      </details>
       <div class="actions">
         <a class="primary download" data-i18n="download">下载 ZIP</a>
         <a class="source" data-i18n="source">查看源码</a>
@@ -67,6 +89,8 @@
       </div>
     </article>
   </template>
+  <noscript>请启用 JavaScript 查看筛选列表。Enable JavaScript for the catalog. <a href="mods.json">mods.json</a> · <a href="https://github.com/CrimsonCrossBunker/CCB-MOD/issues/new?template=mod-submission.md">申请收录 / Submit a MOD</a></noscript>
+  <script src="catalog-core.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
