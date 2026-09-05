@@ -1,0 +1,28 @@
+schema_version: 1
+id: scrap_multitool
+type: ccb-maintained
+name:
+  zh-Hans: "废料多用工具（Lua 示例）"
+  en: "Scrap Multitool (Lua example)"
+description:
+  zh-Hans: "可制作的开局工具，具备切割、锤击和撬动品质。用于实际游玩的 Lua 小示例，不是大型内容包。"
+  en: "A craftable starter tool with cutting, hammering and prying qualities. A small playable Lua example, not a full content pack."
+play_notes:
+  zh-Hans: "新世界启用后，每个新角色获得一把废料多用工具（装不下时检查脚边）。查看工具品质或使用它；用两份废料和一块石头可再制作一把。"
+  en: "Enable in a new world. Your character receives one scrap multitool (check the ground if storage is full). Inspect its tool qualities or activate it. Craft another from two scrap pieces with a rock."
+version: 0.1.0
+authors: [CrimsonCrossBunker contributors]
+maintainers: [CrimsonCrossBunker contributors]
+ccb_adapters: []
+license: MIT
+source: https://github.com/CrimsonCrossBunker/CCB-MOD/tree/main/mods/scrap_multitool
+issues: https://github.com/CrimsonCrossBunker/CCB-MOD/issues
+ccb_versions: [0.Ag-Candidate-2026-09-05-0219]
+lua_api: 1
+dependencies: [dda]
+conflicts: []
+updated_at: "2026-09-05"
+validation:
+  status: passed
+  ccb_version: 0.Ag-Candidate-2026-09-05-0219
+  checked_at: "2026-09-05"

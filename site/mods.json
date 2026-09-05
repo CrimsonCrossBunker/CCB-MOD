@@ -39,9 +39,9 @@
       "conflicts": [],
       "updated_at": "2026-09-05",
       "validation": {
-        "status": "not-tested",
-        "ccb_version": null,
-        "checked_at": null
+        "status": "passed",
+        "ccb_version": "0.Ag-Candidate-2026-09-05-0219",
+        "checked_at": "2026-09-05"
       },
       "download": "https://crimsoncrossbunker.github.io/CCB-MOD/packages/field_journal-0.1.0.zip"
     },
@@ -58,6 +58,10 @@
         "en": "A minimal CCB Lua Platform v1 MOD that displays a message when the world is ready."
       },
       "version": "0.1.0",
+      "play_notes": {
+        "zh-Hans": "在新世界的 MOD 列表中启用，进入世界后打开消息记录，确认出现“来自 CCB-MOD 的问候”。",
+        "en": "Enable in a new world's MOD list. Enter the world and open message history to find Hello from CCB-MOD."
+      },
       "authors": [
         "CrimsonCrossBunker contributors"
       ],
@@ -123,9 +127,9 @@
       "conflicts": [],
       "updated_at": "2026-09-05",
       "validation": {
-        "status": "not-tested",
-        "ccb_version": null,
-        "checked_at": null
+        "status": "passed",
+        "ccb_version": "0.Ag-Candidate-2026-09-05-0219",
+        "checked_at": "2026-09-05"
       },
       "download": "https://crimsoncrossbunker.github.io/CCB-MOD/packages/pocket_alarm-0.1.0.zip"
     },
@@ -166,9 +170,9 @@
       "conflicts": [],
       "updated_at": "2026-09-05",
       "validation": {
-        "status": "not-tested",
-        "ccb_version": null,
-        "checked_at": null
+        "status": "passed",
+        "ccb_version": "0.Ag-Candidate-2026-09-05-0219",
+        "checked_at": "2026-09-05"
       },
       "download": "https://crimsoncrossbunker.github.io/CCB-MOD/packages/scrap_multitool-0.1.0.zip"
     }

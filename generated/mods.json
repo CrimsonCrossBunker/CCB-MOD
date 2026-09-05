@@ -4,6 +4,49 @@
   "mods": [
     {
       "schema_version": 1,
+      "id": "field_journal",
+      "type": "ccb-maintained",
+      "name": {
+        "zh-Hans": "野外观察手册（Lua 示例）",
+        "en": "Field Journal (Lua example)"
+      },
+      "description": {
+        "zh-Hans": "可交互的手册：查看当地天气、记录观察次数，角色记录随存档保存和恢复。",
+        "en": "An interactive notebook: read local weather and record observations with a per-character counter that survives saving and loading."
+      },
+      "play_notes": {
+        "zh-Hans": "新世界启用后获得手册，使用它选择“记录观察”或“查看天气”。保存重载后记录次数仍在。可用一张纸制作替代手册。",
+        "en": "Enable in a new world to receive the journal. Activate it, choose Record observation or Read weather. Save and reload to check the counter. Craft a replacement from one paper sheet."
+      },
+      "version": "0.1.0",
+      "authors": [
+        "CrimsonCrossBunker contributors"
+      ],
+      "maintainers": [
+        "CrimsonCrossBunker contributors"
+      ],
+      "ccb_adapters": [],
+      "license": "MIT",
+      "source": "https://github.com/CrimsonCrossBunker/CCB-MOD/tree/main/mods/field_journal",
+      "issues": "https://github.com/CrimsonCrossBunker/CCB-MOD/issues",
+      "ccb_versions": [
+        "0.Ag-Candidate-2026-09-05-0219"
+      ],
+      "lua_api": 1,
+      "dependencies": [
+        "dda"
+      ],
+      "conflicts": [],
+      "updated_at": "2026-09-05",
+      "validation": {
+        "status": "passed",
+        "ccb_version": "0.Ag-Candidate-2026-09-05-0219",
+        "checked_at": "2026-09-05"
+      },
+      "download": "https://crimsoncrossbunker.github.io/CCB-MOD/packages/field_journal-0.1.0.zip"
+    },
+    {
+      "schema_version": 1,
       "id": "hello_ccb",
       "type": "ccb-maintained",
       "name": {
@@ -15,6 +58,10 @@
         "en": "A minimal CCB Lua Platform v1 MOD that displays a message when the world is ready."
       },
       "version": "0.1.0",
+      "play_notes": {
+        "zh-Hans": "在新世界的 MOD 列表中启用，进入世界后打开消息记录，确认出现“来自 CCB-MOD 的问候”。",
+        "en": "Enable in a new world's MOD list. Enter the world and open message history to find Hello from CCB-MOD."
+      },
       "authors": [
         "CrimsonCrossBunker contributors"
       ],
@@ -42,6 +89,92 @@
         "checked_at": "2026-09-05"
       },
       "download": "https://crimsoncrossbunker.github.io/CCB-MOD/packages/hello_ccb-0.1.0.zip"
+    },
+    {
+      "schema_version": 1,
+      "id": "pocket_alarm",
+      "type": "ccb-maintained",
+      "name": {
+        "zh-Hans": "口袋提醒器（Lua 示例）",
+        "en": "Pocket Reminder (Lua example)"
+      },
+      "description": {
+        "zh-Hans": "可重复使用的十回合提醒器，展示物品交互、角色持久化任务和重复预约防护。",
+        "en": "A reusable ten-turn reminder demonstrating item activation, persistent character tasks and duplicate-scheduling prevention."
+      },
+      "play_notes": {
+        "zh-Hans": "新世界启用后获得提醒器。使用后让游戏经过十回合，会响一条提示；等待时重复使用不会重复预约。可用一份废料和一块石头制作。",
+        "en": "Enable in a new world to receive a reminder. Activate it, then spend ten game turns; a message rings once. Activating while pending does not queue duplicates. Craft from one scrap piece with a rock."
+      },
+      "version": "0.1.0",
+      "authors": [
+        "CrimsonCrossBunker contributors"
+      ],
+      "maintainers": [
+        "CrimsonCrossBunker contributors"
+      ],
+      "ccb_adapters": [],
+      "license": "MIT",
+      "source": "https://github.com/CrimsonCrossBunker/CCB-MOD/tree/main/mods/pocket_alarm",
+      "issues": "https://github.com/CrimsonCrossBunker/CCB-MOD/issues",
+      "ccb_versions": [
+        "0.Ag-Candidate-2026-09-05-0219"
+      ],
+      "lua_api": 1,
+      "dependencies": [
+        "dda"
+      ],
+      "conflicts": [],
+      "updated_at": "2026-09-05",
+      "validation": {
+        "status": "passed",
+        "ccb_version": "0.Ag-Candidate-2026-09-05-0219",
+        "checked_at": "2026-09-05"
+      },
+      "download": "https://crimsoncrossbunker.github.io/CCB-MOD/packages/pocket_alarm-0.1.0.zip"
+    },
+    {
+      "schema_version": 1,
+      "id": "scrap_multitool",
+      "type": "ccb-maintained",
+      "name": {
+        "zh-Hans": "废料多用工具（Lua 示例）",
+        "en": "Scrap Multitool (Lua example)"
+      },
+      "description": {
+        "zh-Hans": "可制作的开局工具，具备切割、锤击和撬动品质。用于实际游玩的 Lua 小示例，不是大型内容包。",
+        "en": "A craftable starter tool with cutting, hammering and prying qualities. A small playable Lua example, not a full content pack."
+      },
+      "play_notes": {
+        "zh-Hans": "新世界启用后，每个新角色获得一把废料多用工具（装不下时检查脚边）。查看工具品质或使用它；用两份废料和一块石头可再制作一把。",
+        "en": "Enable in a new world. Your character receives one scrap multitool (check the ground if storage is full). Inspect its tool qualities or activate it. Craft another from two scrap pieces with a rock."
+      },
+      "version": "0.1.0",
+      "authors": [
+        "CrimsonCrossBunker contributors"
+      ],
+      "maintainers": [
+        "CrimsonCrossBunker contributors"
+      ],
+      "ccb_adapters": [],
+      "license": "MIT",
+      "source": "https://github.com/CrimsonCrossBunker/CCB-MOD/tree/main/mods/scrap_multitool",
+      "issues": "https://github.com/CrimsonCrossBunker/CCB-MOD/issues",
+      "ccb_versions": [
+        "0.Ag-Candidate-2026-09-05-0219"
+      ],
+      "lua_api": 1,
+      "dependencies": [
+        "dda"
+      ],
+      "conflicts": [],
+      "updated_at": "2026-09-05",
+      "validation": {
+        "status": "passed",
+        "ccb_version": "0.Ag-Candidate-2026-09-05-0219",
+        "checked_at": "2026-09-05"
+      },
+      "download": "https://crimsoncrossbunker.github.io/CCB-MOD/packages/scrap_multitool-0.1.0.zip"
     }
   ]
 }
