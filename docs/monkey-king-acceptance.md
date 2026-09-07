@@ -1,6 +1,6 @@
 # 猴王传承 0.4.0 收录记录 / Catalog acceptance
 
-2026-09-07，作者 g1ytx；由提交者提供 ZIP，收录到 CCB-MOD 仓库维护分类。
+2026-09-07，作者和维护人均为 g1ytx；由提交者提供 ZIP，源码收录在 CCB-MOD 仓库，适配人未另外署名。
 
 ## 来源与许可 / Source and license
 

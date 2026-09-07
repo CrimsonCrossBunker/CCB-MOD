@@ -12,7 +12,7 @@ play_notes:
   zh-Hans: 安装 CCB 2026-09-07-2111，创建新世界启用「猴王传承」，在允许该职业的场景中搜索「花果山行者」（8点），或在特质页单独选择六项变异。不会为旧角色转职或补发装备。更新前备份存档，移除旧 Monkey_King_Pilgrim 扩展；旧版 profession.json 不得残留。首次请用测试存档。
   en: Use CCB 2026-09-07-2111 and enable this MOD in a new world. In a scenario allowing it, choose 花果山行者 (8 points), or select the six traits individually. Existing characters are not changed or given equipment. Back up saves before updating; remove the old Monkey_King_Pilgrim extension and any leftover profession.json. Start with a test save.
 authors: [g1ytx]
-maintainers: [CrimsonCrossBunker contributors]
+maintainers: [g1ytx]
 ccb_adapters: []
 license: Not declared / 未声明
 source: https://github.com/CrimsonCrossBunker/CCB-MOD/tree/main/mods/Monkey_King
