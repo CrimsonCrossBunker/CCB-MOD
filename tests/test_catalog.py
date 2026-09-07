@@ -14,10 +14,12 @@ from package_mods import package_mod  # noqa: E402
 
 
 class CatalogTests(unittest.TestCase):
-    def test_catalog_contains_maintained_example(self):
+    def test_catalog_replaces_examples_with_monkey_king(self):
         catalog = build_catalog()
         self.assertEqual(catalog["schema_version"], 1)
-        self.assertEqual({entry["id"] for entry in catalog["mods"]}, {"hello_ccb", "field_journal", "pocket_alarm", "scrap_multitool"})
+        self.assertEqual({entry["id"] for entry in catalog["mods"]}, {"Monkey_King"})
+        self.assertEqual(catalog["mods"][0]["ccb_versions"], ["2026-09-07-2111"])
+        self.assertEqual(catalog["mods"][0]["license"], "Not declared / 未声明")
         self.assertEqual(catalog["mods"][0]["lua_api"], 1)
 
     def test_catalog_is_json_and_bilingual(self):
@@ -27,11 +29,13 @@ class CatalogTests(unittest.TestCase):
 
     def test_package_has_platform_entrypoints(self):
         with tempfile.TemporaryDirectory() as directory:
-            destination = package_mod(ROOT / "mods" / "hello_ccb", "hello_ccb", "0.1.0", Path(directory))
+            destination = package_mod(ROOT / "mods" / "Monkey_King", "Monkey_King", "0.4.0", Path(directory))
             with ZipFile(destination) as archive:
-                self.assertIn("hello_ccb/main.lua", archive.namelist())
-                self.assertIn("hello_ccb/mod.lua", archive.namelist())
-                self.assertNotIn("hello_ccb/ccb-mod.yml", archive.namelist())
+                self.assertIn("Monkey_King/main.lua", archive.namelist())
+                self.assertIn("Monkey_King/mod.lua", archive.namelist())
+                self.assertIn("Monkey_King/profession.lua", archive.namelist())
+                self.assertNotIn("Monkey_King/ccb-mod.yml", archive.namelist())
+                self.assertNotIn("Monkey_King/profession.json", archive.namelist())
 
     def test_community_entry_uses_author_url(self):
         with tempfile.TemporaryDirectory() as directory:

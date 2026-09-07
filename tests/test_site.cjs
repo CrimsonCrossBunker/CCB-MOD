@@ -27,7 +27,9 @@ test('one language is enough; JSON-only MODs omit Lua API', () => {
 test('both maintenance types and multilingual searching work', () => {
   const mods = [...catalog.mods, core.submission(values)];
   assert.equal(core.select(mods, 'community', '', 'updated', 'en').length, 1);
-  assert.equal(core.select(mods, 'ccb-maintained', '', 'updated', 'en').length, 4);
+  assert.deepEqual(core.select(mods, 'ccb-maintained', '', 'updated', 'en').map(mod => mod.id), ['Monkey_King']);
+  assert.equal(core.select(mods, 'all', '猴王', 'name', 'zh-Hans')[0].id, 'Monkey_King');
+  assert.equal(core.select(mods, 'all', 'g1ytx', 'name', 'en')[0].id, 'Monkey_King');
   assert.equal(core.select(mods, 'all', '民间测试', 'name', 'en')[0].id, 'fixture_mod');
   assert.equal(core.select(mods, 'all', 'MAINTAINER', 'name', 'zh-Hans')[0].id, 'fixture_mod');
   assert.equal(core.select(mods, 'all', 'missing!', 'updated', 'en').length, 0);

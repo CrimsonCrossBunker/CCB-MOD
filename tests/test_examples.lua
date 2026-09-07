@@ -30,7 +30,7 @@ for _, id in ipairs({ "scrap_multitool", "field_journal", "pocket_alarm" }) do
     end
     ccb.content.Item, ccb.content.Recipe = definition, definition
     package.loaded.ccb = ccb
-    dofile("mods/" .. id .. "/main.lua")
+    dofile("tests/fixtures/examples/" .. id .. "/main.lua")
     assert(#contents == 2)
     handlers[id .. "_ready"]({new_game=true})
     handlers[id .. "_ready"]({new_game=false})

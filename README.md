@@ -35,7 +35,10 @@ Registration instructions:
 
 - [申请收录 / Submit a MOD](https://crimsoncrossbunker.github.io/CCB-MOD/submit.html): generate a manifest and open a GitHub issue draft, no PR skills required.
 - [目录 API / Catalog API](docs/api.md)
-- CCB-maintained playable examples: `hello_ccb`, `scrap_multitool`, `field_journal`, `pocket_alarm`. These are not fictional community submissions.
+- Current catalog: `Monkey_King` 0.4.0 by g1ytx, requiring CCB `2026-09-07-2111`. License not declared; the repository MIT license does not cover this MOD.
+- 当前收录：g1ytx 的「猴王传承」0.4.0，适配 CCB `2026-09-07-2111`。许可证未声明，不适用仓库 MIT 许可。
+- The four former examples are no longer listed or packaged. Their sources remain only as offline regression fixtures under `tests/fixtures/examples/`; historical acceptance records are not current listings.
+- 四个旧示例已下架，源码仅保留为离线回归测试夹具；不会删除玩家已经安装的副本。
 
 - [简体中文](docs/register.zh-Hans.md)
 - [English](docs/register.en.md)

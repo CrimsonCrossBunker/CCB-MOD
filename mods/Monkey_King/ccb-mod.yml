@@ -1,0 +1,28 @@
+schema_version: 1
+id: Monkey_King
+type: ccb-maintained
+name:
+  zh-Hans: 猴王传承
+  en: Monkey King Legacy
+description:
+  zh-Hans: g1ytx 的西游主题娱乐向强力 MOD，包含六项可选变异及自带六项传承的「花果山行者」职业。0.4.0 为全 Lua 版，需要包含职业同批变异引用修复的 CCB；请使用 2026-09-07-2111，不适用于旧候选版。游戏内文本为简体中文，许可证未声明。
+  en: A powerful Journey to the West themed MOD by g1ytx with six optional mutations and the Huaguo Mountain Pilgrim profession. This all-Lua 0.4.0 release requires the staged profession/mutation fix in CCB 2026-09-07-2111, not older Candidates. In-game text is Simplified Chinese. License not declared.
+version: 0.4.0
+play_notes:
+  zh-Hans: 安装 CCB 2026-09-07-2111，创建新世界启用「猴王传承」，在允许该职业的场景中搜索「花果山行者」（8点），或在特质页单独选择六项变异。不会为旧角色转职或补发装备。更新前备份存档，移除旧 Monkey_King_Pilgrim 扩展；旧版 profession.json 不得残留。首次请用测试存档。
+  en: Use CCB 2026-09-07-2111 and enable this MOD in a new world. In a scenario allowing it, choose 花果山行者 (8 points), or select the six traits individually. Existing characters are not changed or given equipment. Back up saves before updating; remove the old Monkey_King_Pilgrim extension and any leftover profession.json. Start with a test save.
+authors: [g1ytx]
+maintainers: [CrimsonCrossBunker contributors]
+ccb_adapters: []
+license: Not declared / 未声明
+source: https://github.com/CrimsonCrossBunker/CCB-MOD/tree/main/mods/Monkey_King
+issues: https://github.com/CrimsonCrossBunker/CCB-MOD/issues
+ccb_versions: [2026-09-07-2111]
+lua_api: 1
+dependencies: [dda]
+conflicts: [Monkey_King_Pilgrim]
+updated_at: "2026-09-07"
+validation:
+  status: not-tested
+  ccb_version: null
+  checked_at: null
