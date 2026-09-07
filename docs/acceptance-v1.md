@@ -1,5 +1,8 @@
 # First-version acceptance / 第一版验收
 
+Historical record: the four examples below were delisted on 2026-09-07.
+以下为已下架示例的历史记录，不代表当前猴王传承的验证状态；参见 [当前收录记录](monkey-king-acceptance.md)。
+
 2026-09-05, game `0.Ag-Candidate-2026-09-05-0219`, Lua API `1`.
 
 - Linux graphics release: `--userdir /tmp/ccb-candidate-user/ --check-mods hello_ccb` exited 0. Create `config/` inside an isolated user directory before running this command.
