@@ -1,4 +1,4 @@
-# Monkey King Legacy 0.4.0 — Catalog notes
+# Monkey King Legacy 0.4.1 — Catalog notes
 
 Author: g1ytx. In-game text is Simplified Chinese; see README.md for original gameplay details.
 
@@ -13,7 +13,9 @@ six mutations separately. Existing characters are not changed or equipped.
 Back up saves before updating. Remove the old Monkey_King_Pilgrim extension
 and any leftover profession.json to avoid duplicate definitions.
 
-The supplied archive's three Lua files and original README are preserved.
+Version 0.4.1 adds 5% pre-armor reduction of resistible damage to Diamond Ape Body.
+Pure/no-resist damage, direct HP changes and status effects are not reduced.
+Reload an existing character with this mutation to use the updated effect.
 Catalog metadata and bilingual packaging notes have been added.
 The license is **not declared**; the repository's MIT license does not apply
 to this MOD. See LICENSE and docs/monkey-king-acceptance.md in the repository

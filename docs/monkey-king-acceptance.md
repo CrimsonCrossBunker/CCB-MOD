@@ -39,3 +39,14 @@ The bounded native loading attempt did not finish. Validation remains not-tested
 hello_ccb、field_journal、pocket_alarm、scrap_multitool 不再进入生成目录或发布包。
 源码移到 tests/fixtures/examples，只供离线回归；Git 历史和历史验收记录保留。
 此次不删除任何玩家本地 MOD 或存档。
+
+
+## 0.4.1 更新 / Update (2026-09-19)
+
+- 按作者要求，在金刚猿躯中增加 `ARMOR_ALL` 的 `multiply = -0.05`。
+- CCB 原生 `Creature::adjust_taken_damage_by_enchantments` 对非 `no_resist` 伤害应用该属性，
+  `Character::absorb_damage` 在衣甲和被动防护前调用它；这是护甲结算前的5%减伤。
+- 保留六项变异、职业的稳定 ID、作者/维护人 g1ytx 和许可证未声明状态。
+- 原始0.4.0包的散列仅用于上方历史记录，不代表更新包。
+- 本次执行语法、目录、站点、夹具及打包检查，不将它们标记为原生游戏玩法实测。
+  `validation.status` 继续保留 `not-tested`，也不增加未经验证的游戏版本声明。

@@ -29,6 +29,8 @@ local resilience = ccb.content.Enchantment {
     id = "MONKEY_KING_BODY_BONUS",
     condition = "ALWAYS",
 }
+-- Native pre-armor reduction for resistible damage; no_resist types are excluded.
+resilience:value("ARMOR_ALL", { multiply = -0.05 })
 resilience:value("MAX_HP", { multiply = 0.20 })
 resilience:value("REGEN_HP", { multiply = 0.50 })
 -- Native awake healing uses (REGEN_HP_AWAKE - 1); +0.25 enables slow healing.
@@ -40,7 +42,7 @@ local body = ccb.content.Mutation {
     id = "MONKEY_KING_DIAMOND_BODY",
     name = "金刚猿躯",
     ugliness = -4, -- Same native appearance contribution as BEAUTIFUL.
-    description = "你的身躯坚韧而轻灵，容貌俊美，拥有与「美丽」相同的外貌加成。全身获得3点钝击、3点斩击和2点刺击防护，另有3点火焰、寒冷、电击及酸蚀防护，可抵御相应元素法术伤害；不抵御所有法术或状态效果。生命上限增加20%，累赘降低15%，基础生命恢复速度增加50%，清醒时也能缓慢恢复。耐力上限与耐力恢复速度各增加25%。",
+    description = "你的身躯坚韧而轻灵，容貌俊美，拥有与「美丽」相同的外貌加成。受到的可抵抗伤害在护甲结算前降低5%（纯粹等不可抵抗伤害除外）。全身获得3点钝击、3点斩击和2点刺击防护，另有3点火焰、寒冷、电击及酸蚀防护，可抵御相应元素法术伤害；不抵御所有法术或状态效果。生命上限增加20%，累赘降低15%，基础生命恢复速度增加50%，清醒时也能缓慢恢复。耐力上限与耐力恢复速度各增加25%。",
     points = 6,
     starting_trait = true,
     valid = false,
