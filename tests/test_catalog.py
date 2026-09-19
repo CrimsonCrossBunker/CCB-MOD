@@ -29,7 +29,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_package_has_platform_entrypoints(self):
         with tempfile.TemporaryDirectory() as directory:
-            destination = package_mod(ROOT / "mods" / "Monkey_King", "Monkey_King", "0.4.0", Path(directory))
+            destination = package_mod(ROOT / "mods" / "Monkey_King", "Monkey_King", build_catalog()["mods"][0]["version"], Path(directory))
             with ZipFile(destination) as archive:
                 self.assertIn("Monkey_King/main.lua", archive.namelist())
                 self.assertIn("Monkey_King/mod.lua", archive.namelist())
